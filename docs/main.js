@@ -276,6 +276,12 @@ function initCardImageGenerator() {
                                     if (cost.length > 2) {
                                         bigNumberScale = 1.5 / (cost.length - 1);
                                     }
+                                } else if (specialCost === '½') {
+                                    //specialCost = '½';
+                                    specialCostSize = 70;
+                                    if (cost.length > 2) {
+                                        bigNumberScale = 1.5 / (cost.length - 1);
+                                    }
                                 } else {
                                     specialCost = null;
                                     bigNumberScale = 1.5 / cost.length;
