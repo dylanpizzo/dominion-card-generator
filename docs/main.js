@@ -280,8 +280,10 @@ function initCardImageGenerator() {
                                     //specialCost = '½';
                                     specialCostSize = 70;
                                     if (cost.length > 2) {
-                                        bigNumberScale = 1.5 / (cost.length - 1);
-                                    }
+                                        bigNumberScale = 1.2 / (cost.length - 1);
+                                    } else {
+					bigNumberScale = 1.2;
+				    }
                                 } else {
                                     specialCost = null;
                                     bigNumberScale = 1.5 / cost.length;
