@@ -279,7 +279,7 @@ function initCardImageGenerator() {
                                 } else if (specialCost === '½') {
                                     //specialCost = '½';
                                     specialCostSize = 60;
-				    syShift = 30;
+				    syShift = 15;
                                     if (cost.length > 2) {
                                         bigNumberScale = 1.2 / (cost.length - 1);
                                     } else {
