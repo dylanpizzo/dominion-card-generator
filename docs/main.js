@@ -282,8 +282,9 @@ function initCardImageGenerator() {
                                     if (cost.length > 2) {
                                         bigNumberScale = 1.2 / (cost.length - 1);
                                     } else {
-					bigNumberScale = 0.8;
-					nx -= 5;
+					bigNumberScale = 0.85;
+					nx -= 8;
+					syShify = 7;
 				    }
                                 } else {
                                     specialCost = null;
