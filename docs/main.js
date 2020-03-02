@@ -92,7 +92,7 @@ function initCardImageGenerator() {
 
     var iconList = "[" + Object.keys(icons).join("") + "]";
     //var boldLinePatternIcons = RegExp("[-+]\\d+\\s" + iconList + "\\d+", "ig");
-    var iconWithNumbersPattern = "[-+]?(" + iconList + ")([\\d\\?]*[-+\\*]?|\\{.*\\})";
+    var iconWithNumbersPattern = "[-+]?(" + iconList + ")(\\{.*\\}|[\\d\\?]*[-+\\*]?)";
     var iconWithNumbersPatternSingle = RegExp("^([-+]?\\d+)?" + iconWithNumbersPattern + "(\\S*)$");
     iconWithNumbersPattern = RegExp(iconWithNumbersPattern, "g");
 
@@ -248,6 +248,9 @@ function initCardImageGenerator() {
                             context.textAlign = "center";
                             context.fillStyle = getIconListing(match[2])[1];
                             let cost = match[3];
+			    if (cost[0] == "{") {
+				cost = cost.slice(1,-1);
+			    }
                             let bigNumberScale = 1;
                             let nx = localScale > 1.4 ? 0 : -5 * localScale ^ 2;
                             let ny = localScale > 1 ? 6 * localScale : localScale > 0.7 ? 12 * localScale : localScale > 0.5 ? 24 * localScale : 48 * localScale;
