@@ -92,7 +92,7 @@ function initCardImageGenerator() {
 
     var iconList = "[" + Object.keys(icons).join("") + "]";
     //var boldLinePatternIcons = RegExp("[-+]\\d+\\s" + iconList + "\\d+", "ig");
-    var iconWithNumbersPattern = "[-+]?(" + iconList + ")([\\d\\?]*[-+\\*]?)";
+    var iconWithNumbersPattern = "[-+]?(" + iconList + ")([\\d\\?]*[-+\\*]?|\\{.*\\})";
     var iconWithNumbersPatternSingle = RegExp("^([-+]?\\d+)?" + iconWithNumbersPattern + "(\\S*)$");
     iconWithNumbersPattern = RegExp(iconWithNumbersPattern, "g");
 
