@@ -278,11 +278,12 @@ function initCardImageGenerator() {
                                     }
                                 } else if (specialCost === '½') {
                                     //specialCost = '½';
-                                    specialCostSize = 70;
+                                    specialCostSize = 60;
                                     if (cost.length > 2) {
                                         bigNumberScale = 1.2 / (cost.length - 1);
                                     } else {
 					bigNumberScale = 0.8;
+					nx -= 5;
 				    }
                                 } else {
                                     specialCost = null;
